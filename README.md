@@ -1,16 +1,26 @@
-citra emulator
-==============
-[![Travis CI Build Status](https://travis-ci.org/citra-emu/citra.svg)](https://travis-ci.org/citra-emu/citra)
+# Artic Emulator
 
-An experimental open-source Nintendo 3DS emulator/debugger written in C++. At this time, it only emulates a very small subset of 3DS hardware, and therefore is only useful for booting/debugging very simple homebrew demos. Citra is licensed under the GPLv2. Refer to the license.txt file included. Please read the [FAQ](https://github.com/citra-emu/citra/wiki/FAQ) before getting started with the project.
+**Artic** ist ein quelloffener Emulator, der für Forschungs- und Entwicklungszwecke erstellt wurde.  
+Er basiert auf dem öffentlichen Citra-Code (GPLv2) und zielt darauf ab, die Architektur moderner Handheld-Systeme zu verstehen und zu reproduzieren.
 
-For development discussion, please join us @ #citra on [freenode](http://webchat.freenode.net/).
+## ⚙️ Features
+- High-level-Emulation moderner Handheld-Grafikpipelines  
+- Cross-Platform (Windows / Linux / macOS)  
+- Modularer Code mit CMake
 
-### Development
+## 🧩 Lizenz
+Dieses Projekt steht unter der **GNU General Public License v2 (GPLv2)**.  
+Der vollständige Lizenztext befindet sich in der Datei [`LICENSE`](LICENSE).
 
-If you want to contribute please take a took at the [Contributor's Guide](CONTRIBUTING.md), [Roadmap](https://github.com/citra-emu/citra/wiki/Roadmap) and [Developer Information](https://github.com/citra-emu/citra/wiki/Developer-Information) pages. You should as well contact any of the developers in the forum in order to know about the current state of the emulator.
+## ⚠️ Rechtlicher Hinweis
+Artic enthält **keine** urheberrechtlich geschützten Inhalte von Nintendo oder anderen Herstellern.  
+Es werden **keine ROMs, BIOS-Dateien oder Schlüsseldateien** bereitgestellt oder verlinkt.  
+Die Nutzung von Artic setzt voraus, dass du ausschließlich selbst erstellte oder rechtmäßig erworbene Inhalte nutzt.
 
-### Building
-
-* __Windows__: [Windows Build](https://github.com/citra-emu/citra/wiki/Windows-Build)
-* __Linux__: [Linux Build](https://github.com/citra-emu/citra/wiki/Linux-Build)
+## 🛠️ Build
+```bash
+git clone https://github.com/<deinusername>/Artic.git
+cd Artic
+mkdir build && cd build
+cmake ..
+cmake --build .
