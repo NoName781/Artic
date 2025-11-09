@@ -19,7 +19,7 @@ Die Nutzung von Artic setzt voraus, dass du ausschließlich selbst erstellte ode
 
 ## 🛠️ Build
 ```bash
-git clone https://github.com/<deinusername>/Artic.git
+git clone https://github.com/NoName781/Artic.git
 cd Artic
 mkdir build && cd build
 cmake ..
