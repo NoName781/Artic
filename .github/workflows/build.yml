@@ -1,6 +1,5 @@
 name: Build Artic
 
-# Trigger: bei jedem Push auf main oder Pull Request auf main
 on:
   push:
     branches: [main]
@@ -12,11 +11,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    # 1️⃣ Code aus dem Repo holen
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-    # 2️⃣ Qt installieren (Version 6.6.2)
     - name: Setup Qt
       uses: jurplel/install-qt-action@v2
       with:
@@ -24,19 +20,15 @@ jobs:
         host: 'windows'
         target: 'desktop'
 
-    # 3️⃣ CMake installieren
     - name: Setup CMake
       uses: jwlawson/actions-setup-cmake@v2
 
-    # 4️⃣ Projekt konfigurieren
     - name: Configure CMake
       run: cmake -B build -S . -DCMAKE_PREFIX_PATH="${{ env.QTDIR }}" -G "Visual Studio 17 2022"
 
-    # 5️⃣ Projekt bauen
     - name: Build
       run: cmake --build build --config Release --parallel 2
 
-    # 6️⃣ Binaries hochladen
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
